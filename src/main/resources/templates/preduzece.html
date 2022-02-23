@@ -36,7 +36,9 @@
 						<td th:text="${pred.tekuciRacun}">Tekuci racun</td>
 						<td th:text="${pred.telefon}">Telefon</td>
 						<td th:text="${pred.mesto.getGrad()}">Grad</td>
-
+												<td><a class="btn btn-success"
+							th:href="@{'/preduzece/azuriraj/' + ${pred.Id}}" role="button" >Azuriraj</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>

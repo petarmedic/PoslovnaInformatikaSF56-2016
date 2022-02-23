@@ -25,5 +25,17 @@ public class PreduzeceService implements IPreduzeceService {
 		return preduzeceRepository.findAll();
 	}
 	
+	@Override
+	public Preduzece findOne(Long id) {
+		return preduzeceRepository.getOne(id);
+	}
+
+	@Override
+	public void save(Preduzece preduzece) {
+		
+		preduzeceRepository.save(preduzece);
+		
+	}
+
 	
 }

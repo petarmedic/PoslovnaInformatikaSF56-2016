@@ -9,4 +9,8 @@ public interface IPreduzeceService {
 
 	List<Preduzece> findAll();
 
+	Preduzece findOne(Long id);
+
+	void save(Preduzece preduzece);
+
 }
