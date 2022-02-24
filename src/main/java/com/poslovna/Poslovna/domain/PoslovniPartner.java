@@ -257,7 +257,7 @@ public class PoslovniPartner {
 	public PoslovniPartner() {
 		super();
 	}
-
-
 	
+	
+
 }

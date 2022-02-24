@@ -6,7 +6,7 @@ import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.poslovna.Poslovna.domain.GrupaRobe;
 import com.poslovna.Poslovna.domain.StavkaFakture;
-import com.poslovna.Poslovna.domain.StavkeCenovnika;
+import com.poslovna.Poslovna.domain.StavkaCenovnika;
 
 public class RobaDTO {
 
@@ -18,7 +18,7 @@ public class RobaDTO {
 	@JsonIgnore
 	private GrupaRobe grupaRobe;
 	@JsonIgnore
-	private Set<StavkeCenovnika> stavkeCenovnika = new HashSet<>();
+	private Set<StavkaCenovnika> stavkeCenovnika = new HashSet<>();
 	@JsonIgnore
 	private Set<StavkaFakture> stavkeFakture = new HashSet<>();
 
@@ -56,11 +56,11 @@ public class RobaDTO {
 		this.grupaRobe = grupaRobe;
 	}
 
-	public Set<StavkeCenovnika> getStavkeCenovnika() {
+	public Set<StavkaCenovnika> getStavkeCenovnika() {
 		return stavkeCenovnika;
 	}
 
-	public void setStavkeCenovnika(Set<StavkeCenovnika> stavkeCenovnika) {
+	public void setStavkeCenovnika(Set<StavkaCenovnika> stavkeCenovnika) {
 		this.stavkeCenovnika = stavkeCenovnika;
 	}
 
@@ -81,7 +81,7 @@ public class RobaDTO {
 	}
 
 	public RobaDTO(long id, String nazivRobe, String jedinicaMere, GrupaRobe grupaRobe,
-			Set<StavkeCenovnika> stavkeCenovnika, Set<StavkaFakture> stavkeFakture, boolean obrisano) {
+			Set<StavkaCenovnika> stavkeCenovnika, Set<StavkaFakture> stavkeFakture, boolean obrisano) {
 		super();
 		this.id = id;
 		this.nazivRobe = nazivRobe;

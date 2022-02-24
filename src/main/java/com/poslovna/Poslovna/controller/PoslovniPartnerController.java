@@ -24,9 +24,11 @@ import com.poslovna.Poslovna.service.IMestoService;
 import com.poslovna.Poslovna.service.IPoslovniPartnerService;
 import com.poslovna.Poslovna.service.IPreduzeceService;
 
+
+
 @Controller
 public class PoslovniPartnerController {
-	
+
 	@Autowired
 	private IPoslovniPartnerService poslovniPartnerServiceInterface;
 
@@ -81,7 +83,7 @@ public class PoslovniPartnerController {
 
 	@PostMapping("/poslovniPartneri/azuriraj")
 	public String azurirajPoslovnogPartnera(PoslovniPartnerDTO poslovniPartnerDTO) {
-		PoslovniPartner partner = dtoToPoslovniPartner.konvertujDtoToEntity(poslovniPartnerDTO);
+		PoslovniPartner partner = dtoToPoslovniPartner.konvertujDTOToEntity(poslovniPartnerDTO);
 		partner.setPreduzece(preduzeceService.findAll().get(0));
 		poslovniPartnerServiceInterface.save(partner);
 
@@ -100,7 +102,7 @@ public class PoslovniPartnerController {
 	@PostMapping("poslovniPartner/dodavanje")
 	public String dodajPoslovnogPartnera(PoslovniPartnerDTO poslovniPartnerDTO) {
 		List<Preduzece> preduzeca = preduzeceService.findAll();
-		PoslovniPartner partner = dtoToPoslovniPartner.konvertujDtoToEntity(poslovniPartnerDTO);
+		PoslovniPartner partner = dtoToPoslovniPartner.konvertujDTOToEntity(poslovniPartnerDTO);
 		partner.setPreduzece(preduzeca.get(0));
 		partner.setObrisano(false);
 		poslovniPartnerServiceInterface.save(partner);
@@ -115,6 +117,5 @@ public class PoslovniPartnerController {
 		
 		return "redirect:/poslovniPartneri";
 	}
-
 
 }

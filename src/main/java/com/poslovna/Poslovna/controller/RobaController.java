@@ -15,13 +15,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.poslovna.Poslovna.domain.GrupaRobe;
 import com.poslovna.Poslovna.domain.Roba;
+import com.poslovna.Poslovna.domain.StavkaCenovnika;
 import com.poslovna.Poslovna.dto.RobaDTO;
+import com.poslovna.Poslovna.dto.StavkaCenovnikaDTO;
 import com.poslovna.Poslovna.mapper.GrupaRobeDTOToGrupaRobe;
 import com.poslovna.Poslovna.mapper.GrupaRobeToGrupaRobeDTO;
 import com.poslovna.Poslovna.mapper.RobaDTOToRoba;
 import com.poslovna.Poslovna.mapper.RobaToRobaDTO;
+import com.poslovna.Poslovna.mapper.StavkaCenovnikaToStavkaCenovnikaDTO;
 import com.poslovna.Poslovna.service.IGrupaRobeService;
 import com.poslovna.Poslovna.service.IRobaService;
+import com.poslovna.Poslovna.service.IStavkaCenovnikaService;
 
 
 @Controller
@@ -47,8 +51,11 @@ public class RobaController {
 	@Autowired
 	private GrupaRobeDTOToGrupaRobe grupaRobeDTOToGrupaRobe;
 	
-
+	@Autowired
+	private StavkaCenovnikaToStavkaCenovnikaDTO stavkaCenovnikaToStavkaCenovnikaDTO;
 	
+	@Autowired
+	IStavkaCenovnikaService stavkeCenovnikaService;
 	
 	@GetMapping("/roba")
 	public String vratiSveProizvode(Model model) {
@@ -76,6 +83,17 @@ public class RobaController {
 		dodajAtributeUModel(model, robaDTO);
 		return "azurirajRobu";
 	}
+	
+	@GetMapping("/roba/cena/{id}")
+	@JsonIgnore
+	public @ResponseBody StavkaCenovnikaDTO getCena(@PathVariable("id") long id) {
+			List<StavkaCenovnika> stavkeCenovnika = stavkeCenovnikaService.findStavkeCenovnikaByRobaId(id);
+			if(stavkeCenovnika.size() > 0) {
+			List<StavkaCenovnikaDTO> stavke = stavkaCenovnikaToStavkaCenovnikaDTO.konvertujEntityToDto(stavkeCenovnika);
+			return stavke.get(0);
+			}
+			return null;
+    }
 	
 	@PutMapping("/roba/azuriraj")
 	public String azurirajGrupuRobe(RobaDTO robaDTO) {

@@ -39,7 +39,7 @@ public class Roba {
 	private GrupaRobe grupaRobe;
 
 	@OneToMany(mappedBy = "roba", cascade = CascadeType.ALL)
-	private Set<StavkeCenovnika> stavkeCenovnika = new HashSet<>();
+	private Set<StavkaCenovnika> stavkeCenovnika = new HashSet<>();
 
 	@OneToMany(mappedBy = "roba", cascade = CascadeType.ALL)
 	private Set<StavkaFakture> stavkeFakture = new HashSet<>();
@@ -78,11 +78,11 @@ public class Roba {
 		this.grupaRobe = grupaRobe;
 	}
 
-	public Set<StavkeCenovnika> getStavkeCenovnika() {
+	public Set<StavkaCenovnika> getStavkeCenovnika() {
 		return stavkeCenovnika;
 	}
 
-	public void setStavkeCenovnika(Set<StavkeCenovnika> stavkeCenovnika) {
+	public void setStavkeCenovnika(Set<StavkaCenovnika> stavkeCenovnika) {
 		this.stavkeCenovnika = stavkeCenovnika;
 	}
 
@@ -103,7 +103,7 @@ public class Roba {
 	}
 
 	public Roba(long id, String nazivRobe, String jedinicaMere, GrupaRobe grupaRobe,
-			Set<StavkeCenovnika> stavkeCenovnika, Set<StavkaFakture> stavkeFakture, boolean obrisano) {
+			Set<StavkaCenovnika> stavkeCenovnika, Set<StavkaFakture> stavkeFakture, boolean obrisano) {
 		super();
 		this.id = id;
 		this.nazivRobe = nazivRobe;

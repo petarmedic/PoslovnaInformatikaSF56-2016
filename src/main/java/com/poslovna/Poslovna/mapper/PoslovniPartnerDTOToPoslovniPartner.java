@@ -9,7 +9,7 @@ import com.poslovna.Poslovna.dto.PoslovniPartnerDTO;
 @Component
 public class PoslovniPartnerDTOToPoslovniPartner {
 
-	public PoslovniPartner konvertujDtoToEntity(PoslovniPartnerDTO poslovniPartnerDTO) {
+	public PoslovniPartner konvertujDTOToEntity(PoslovniPartnerDTO poslovniPartnerDTO) {
 		
 		PoslovniPartner poslovniPartner = new PoslovniPartner();
 		poslovniPartner.setId(poslovniPartnerDTO.getId());

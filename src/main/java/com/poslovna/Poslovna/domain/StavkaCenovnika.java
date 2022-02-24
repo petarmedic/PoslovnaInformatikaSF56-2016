@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class StavkeCenovnika {
+public class StavkaCenovnika {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -67,7 +67,7 @@ public class StavkeCenovnika {
 		this.obrisano = obrisano;
 	}
 
-	public StavkeCenovnika(long id, float cena, Cenovnik cenovnik, Roba roba, boolean obrisano) {
+	public StavkaCenovnika(long id, float cena, Cenovnik cenovnik, Roba roba, boolean obrisano) {
 		super();
 		this.id = id;
 		this.cena = cena;
@@ -76,7 +76,7 @@ public class StavkeCenovnika {
 		this.obrisano = obrisano;
 	}
 
-	public StavkeCenovnika() {
+	public StavkaCenovnika() {
 		super();
 	}
 

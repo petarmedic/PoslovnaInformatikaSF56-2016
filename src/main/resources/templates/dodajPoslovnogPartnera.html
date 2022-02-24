@@ -56,7 +56,7 @@
 					<select name="tipPoslovnogPartnera" id="tipPoslovnogPartnera"
 						class="form-control" th:field="*{tipPoslovnogPartnera}">
 						<option
-							th:each="vrstaPoslovnogPartnera: ${T(com.poslovnainformatika.app.domain.PoslovniPartner.TipPoslovnogPartnera).values()}"
+							th:each="vrstaPoslovnogPartnera: ${T(com.poslovna.Poslovna.domain.PoslovniPartner.TipPoslovnogPartnera).values()}"
 							th:value="${vrstaPoslovnogPartnera}"
 							th:text="${vrstaPoslovnogPartnera}"></option>
 					</select>
