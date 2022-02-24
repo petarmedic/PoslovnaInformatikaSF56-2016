@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="template :: header"></div>
+<title>Grupa robe</title>
+</head>
+
+<body>
+	<div th:insert="template :: navbar"></div>
+	<div class="container ">
+		<h1>Grupa robe</h1>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon1"><i
+					class="fa fa-search"></i></span>
+			</div>
+			<input id="search" type="text" class="form-control"
+				placeholder="Pretraga..." aria-label="Search"
+				aria-describedby="basic-addon1">
+		</div>
+		<div class="row col-md-12 table-responsive">
+			<table id="customerTable" class="table">
+				<thead>
+					<tr>
+						<th>Naziv grupe</th>
+						<th>PDV</th>
+						<th>Azuriraj</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody class="searchTable">
+					<tr th:each="grupaRobe, rowStat: ${listaGrupaRobe}"
+						th:style="${rowStat.even} ? 'color: gray' : 'color: black;'">
+						<td th:text="${grupaRobe.naziv}">Naziv grupe</td>
+						<td th:text="${grupaRobe.pdv.vrstaPdv}">PDV</td>
+						<td><a class="btn btn-success"
+							th:href="@{'/grupaRobe/azuriraj/' + ${grupaRobe.Id}}" role="button">Azuriraj</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="btn btn-info" th:href="@{/grupaRobe/kreiraj}"
+				role="button">Kreiraj grupu robe</a>
+		</div>
+	</div>
+	<div th:replace="template :: scriptFrag"></div>
+	<script th:src="@{/js/search.js}"></script>
+</body>
+</html>
