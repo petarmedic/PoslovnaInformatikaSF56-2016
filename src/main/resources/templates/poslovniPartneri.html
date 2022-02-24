@@ -35,7 +35,7 @@
 				<tbody class="searchTable">
 					<div th:if="${tipPoslovnogPartnera}">
 						<tr th:each="poslovniPartner, rowStat: ${poslovniPartneri}"
-							th:style="${rowStat.even} ? 'color: gray' : 'color: blue;'">
+							th:style="${rowStat.even} ? 'color: black' : 'color: black;'">
 							<td th:text="${poslovniPartner.nazivPoslovnogPartnera}">Naziv</td>
 							<td th:text="${poslovniPartner.PIB}">PIB</td>
 							<td th:text="${poslovniPartner.tekuciRacun}">Tekuci racun</td>

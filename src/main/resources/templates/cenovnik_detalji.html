@@ -21,7 +21,7 @@
 				</thead>
 				<tbody>
 						<tr th:each="stavkaCen, rowStat: ${stavkeCenovnika}"
-							th:style="${rowStat.even} ? 'color: gray' : 'color: blue;'">
+							th:style="${rowStat.even} ? 'color: black' : 'color: black;'">
 							<td th:text="${stavkaCen.roba.nazivRobe}">Roba</td>
 							<td th:text="${stavkaCen.cena}">Cena</td>						
 						</tr>					

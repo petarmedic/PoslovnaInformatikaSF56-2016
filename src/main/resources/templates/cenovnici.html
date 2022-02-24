@@ -22,7 +22,7 @@
 				<tbody>
 					<div>
 						<tr th:each="cenovnik, rowStat: ${cenovnici}"
-							th:style="${rowStat.even} ? 'color: gray' : 'color: blue;'">
+							th:style="${rowStat.even} ? 'color: black' : 'color: black;'">
 							<td th:text="${cenovnik.pocetakRokaTrajanja}">Datum vazenja od</td>
 							<td th:text="${cenovnik.poslovniPartner.nazivPoslovnogPartnera}">Poslovni partner</td>
 							<td><a class="btn btn-primary"

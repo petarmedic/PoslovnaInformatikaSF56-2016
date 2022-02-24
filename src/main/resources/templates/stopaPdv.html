@@ -20,7 +20,7 @@
 				</thead>
 				<tbody>
 					<tr th:each="stopaPdv, rowStat: ${listaStopaPdv}"
-						th:style="${rowStat.even} ? 'color: gray' : 'color: blue;'">
+						th:style="${rowStat.even} ? 'color: black' : 'color: black;'">
 						<td th:text="${stopaPdv.pdv.vrstaPdv}">Vrsta PDV</td>
 						<td th:text="${stopaPdv.procenat}">Procenat</td>
 						<td th:text="${dateFormat.format(stopaPdv.rokVazenja)}">Rok

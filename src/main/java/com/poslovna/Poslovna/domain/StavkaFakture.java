@@ -41,6 +41,16 @@ public class StavkaFakture {
 	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "faktura_id")
 	private Faktura faktura;
+	
+	private boolean obrisano;
+
+	public boolean isObrisano() {
+		return obrisano;
+	}
+
+	public void setObrisano(boolean obrisano) {
+		this.obrisano = obrisano;
+	}
 
 	public long getId() {
 		return id;

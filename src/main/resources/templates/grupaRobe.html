@@ -30,7 +30,7 @@
 				</thead>
 				<tbody class="searchTable">
 					<tr th:each="grupaRobe, rowStat: ${listaGrupaRobe}"
-						th:style="${rowStat.even} ? 'color: gray' : 'color: black;'">
+						th:style="${rowStat.even} ? 'color: black' : 'color: black;'">
 						<td th:text="${grupaRobe.naziv}">Naziv grupe</td>
 						<td th:text="${grupaRobe.pdv.vrstaPdv}">PDV</td>
 						<td><a class="btn btn-success"

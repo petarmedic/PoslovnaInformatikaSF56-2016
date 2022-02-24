@@ -1,0 +1,29 @@
+header{
+	background-image: url("https://cdn11.bigcommerce.com/s-bv977zbkdy/images/stencil/1000x1000/products/5320/26234/3552__21168.1616075166.jpg?c=1")
+}
+
+body {
+	background-image: url("https://cdn11.bigcommerce.com/s-bv977zbkdy/images/stencil/1000x1000/products/5320/26234/3552__21168.1616075166.jpg?c=1")
+}
+
+.card-body {
+background-image: url("https://cdn11.bigcommerce.com/s-bv977zbkdy/images/stencil/1000x1000/products/5320/26234/3552__21168.1616075166.jpg?c=1")
+}
+
+#rezultat-div {
+	margin-left: 87%;
+	padding:10px;
+	background-color: #ffae42;
+	
+}
+
+#iznos-label {
+    margin-left: 87%;
+    width: 20%;
+    float: right;
+    margin-top: -50px;
+    padding: 10px;
+    background-color: #ffae42;
+   ;
+}
+

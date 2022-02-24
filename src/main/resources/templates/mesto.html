@@ -26,7 +26,7 @@
 				</thead>
 				<tbody class="searchTable">
 					<tr th:each="mesto, rowStat: ${listaMesta}"
-						th:style="${rowStat.even} ? 'color: gray' : 'color: blue;'">
+						th:style="${rowStat.even} ? 'color: black' : 'color: black;'">
 						<td th:text="${mesto.grad}">Grad</td>
 						<td th:text="${mesto.postanskiBroj}">Postanski broj</td>
 						<td><a class="btn btn-primary"
