@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="template :: header"></div>
+<title>Fakture</title>
+</head>
+
+<body>
+	<div th:insert="template :: navbar"></div>
+	<div class="container ">
+		<h1>Fakture</h1>
+		<div class="row col-md-12 table-responsive">
+			<table id="customerTable" class="table">
+				<thead>
+					<tr>
+						<th>Broj fakture</th>
+						<th>Poslovni partner</th>
+						<th>Datum fakture</th>
+						<th>Datum valute</th>
+						<th>Mesto</th>
+						<th>Ukupan iznos fakture</th>
+					</tr>
+				</thead>
+				<tbody>
+				
+					
+						<tr th:each="faktura, rowStat: ${fakture}"
+							th:style="${rowStat.even} ? 'color: gray' : 'color: black;'">
+							<td th:text="${faktura.brojFakture}">Broj fakture</td>
+							<td th:text="${faktura.poslovniPartner.nazivPoslovnogPartnera}">Poslovni partner</td>
+							<td th:text="${faktura.datumFakture}">Datum fakture</td>
+							<td th:text="${faktura.datumValute}">Datum valute</td>
+							<td th:text="${faktura.poslovniPartner.mesto.grad}">Mesto</td>
+							<td th:text="${faktura.iznosZaPlacanje}">Ukupan iznos fakture</td>
+							
+							<td><a class="btn btn-info"
+								th:href="@{'/faktura/detalji/' + ${faktura.id}}"
+								role="button">Detalji fakture</a></td>
+					
+						</tr>
+				</tbody>
+			</table>
+			
+			
+			
+		
+		</div>	
+	</div>
+	<div th:replace="template :: scriptFrag"></div>
+</body>
+</html>
