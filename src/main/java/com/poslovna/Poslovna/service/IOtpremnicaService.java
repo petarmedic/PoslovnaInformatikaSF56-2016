@@ -2,6 +2,7 @@ package com.poslovna.Poslovna.service;
 
 import java.util.List;
 
+import com.poslovna.Poslovna.domain.Narudzbenica;
 import com.poslovna.Poslovna.domain.Otpremnica;
 import com.poslovna.Poslovna.dto.OtpremnicaDTO;
 
@@ -16,5 +17,7 @@ public interface IOtpremnicaService {
 	List<Otpremnica> findAll();
 
 	void kreirajFakturuOdOtpremnice(OtpremnicaDTO otpremnicaDTO, int brojFakture);
+
+	void kreirajOtpremnicuOdNaruzbenice(Narudzbenica narudzbenica);
 
 }

@@ -38,6 +38,7 @@ public class StavkaOtpremniceService implements IStavkaOtpremniceService {
 		stavkaOtpremniceRepository.save(stavka);
 		
 	}
+	
 
 
 }
