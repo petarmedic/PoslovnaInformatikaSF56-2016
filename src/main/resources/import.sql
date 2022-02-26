@@ -45,7 +45,7 @@ INSERT INTO `cenovnik` (`kraj_roka_trajanja`, `obrisano`, `pocetak_roka_trajanja
 INSERT INTO `cenovnik` (`kraj_roka_trajanja`, `obrisano`, `pocetak_roka_trajanja`, `poslovni_partner_id`, `preduzece_id`) VALUES ('2024-07-05', false, '2020-08-08', '2', '1');
 INSERT INTO `cenovnik` (`kraj_roka_trajanja`, `obrisano`, `pocetak_roka_trajanja`, `poslovni_partner_id`, `preduzece_id`) VALUES ('2023-05-05', false, '2019-11-06', '3', '1');
 
-INSERT INTO `poslovna_godina` (`godina_poslovanja`, `obrisano`, `zakljucena_godina`) VALUES ('2021', false, false);
+INSERT INTO `poslovna_godina` (`godina_poslovanja`, `obrisano`, `zakljucena_godina`) VALUES ('2022', false, false);
 
 INSERT INTO `stavka_cenovnika` (`cena`, `cenovnik_id`, `obrisano`, `roba_id`) VALUES ('2000', 1, false, 1);
 INSERT INTO `stavka_cenovnika` (`cena`, `cenovnik_id`, `obrisano`, `roba_id`) VALUES ('3000', 1, false, 2);
